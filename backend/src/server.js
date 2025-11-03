@@ -18,7 +18,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 
 //check if the production ready add the path for static frontend assets
-if (process.env.NODE_ENV === "production"){
+if (process.env.NODE_ENV === "production") {
   const frontendDir = path.resolve(__dirname, "../../frontend/dist");
   app.use(express.static(frontendDir));
   // SPA fallback for non-API routes
