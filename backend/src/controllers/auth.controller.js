@@ -38,6 +38,7 @@ export const signup = async (req, res) => {
         });
 
         if(newUser){
+            //we send the token thats why we pass the res object
             generateToken(newUser._id, res);
             await newUser.save();
 
